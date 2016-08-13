@@ -1,7 +1,7 @@
 ## Parallax Demo
 
 Screen capture demo:  
-![image](https://github.com/LiviuLvu/gh-pages/blob/master/parallax-dark-suits.jpg)  
+![image](https://github.com/LiviuLvu/parallax-dark-suits/blob/gh-pages/parallax-dark-suits.png)  
 Test live:  
 http://liviulvu.github.io/parallax-dark-suits/  
 
