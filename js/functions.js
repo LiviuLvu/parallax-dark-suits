@@ -5,8 +5,9 @@ jQuery(document).ready(function($) {
    $(window).scroll(function() {
       // scrolled distance from top
       var wScroll = $(this).scrollTop();
-      // apply parallax effects only if the header is visible on screen
-      if (wScroll <= pContainerHeight) {
+      var wWidth = $(window).width() > 600;
+      // apply parallax effects only if the header is visible on screen and screen width is desktop
+      if (wScroll <= pContainerHeight && wWidth) {
          $('.logo').css({
             'transform': 'translate(0px,' + wScroll / 2 + '%)'
          });
@@ -14,8 +15,8 @@ jQuery(document).ready(function($) {
             'transform': 'translate(0px, -' + wScroll / 40 + '%)'
          });
       }
-      // gallery items animation
-      if (wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2)) {
+      // gallery items animation. Apply only on large screens.
+      if (wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2) && wWidth) {
          $('.clothes-pics figure').each(function(i) {
             setTimeout(function() {
                $('.clothes-pics figure').eq(i).addClass('is-showing');
@@ -23,7 +24,7 @@ jQuery(document).ready(function($) {
          });
       }
       // promoscope round photo
-      if (wScroll > $('.large-window').offset().top - $(window).height()) {
+      if (wScroll > $('.large-window').offset().top - $(window).height() && wWidth) {
          // repeat the background while scrolling
          $('.large-window').css({
             'background-position': 'center ' + (wScroll - $('.large-window').offset().top) + 'px'
@@ -33,7 +34,7 @@ jQuery(document).ready(function($) {
          $('.window-tint').css({ 'opacity': opacity });
       }
       // blog posts
-      if (wScroll > $('.blog-posts').offset().top - $(window).height()) {
+      if (wScroll > $('.blog-posts').offset().top - $(window).height() && wWidth) {
 
          var offset = Math.min(0, wScroll - $('.blog-posts').offset().top + $(window).height() - 400);
 

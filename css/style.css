@@ -1078,33 +1078,6 @@ hr {
    clear: both;
 }
 
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-
-
-/* Larger than mobile */
-
-
-/* Larger than phablet (also point when grid becomes active) */
-
-
-/* Larger than tablet */
-
-
-/* Larger than desktop */
-
-
-/* Larger than Desktop HD */
-
 body {
    font-family: "Open Sans", sans-serif;
 }
@@ -1160,7 +1133,7 @@ img {
    background-repeat: no-repeat;
    position: absolute;
    top: 50%;
-   left: -16%;
+   left: -15%;
    margin-top: -50px;
 }
 
@@ -1296,7 +1269,7 @@ figcaption {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .blog-posts {
-   margin-top: 100px;
+   margin-top: 60px;
 }
 
 .blog-posts .posts {
@@ -1339,4 +1312,74 @@ footer .footer-stuff {
 
 footer .footer-stuff a {
    color: white;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Larger than tablet */
+
+@media (max-width: 740px) {
+   .logo {
+      left: 0%;
+   }
+   footer div {
+      padding: 4px;
+   }
+}
+
+
+/* Larger than mobile */
+
+@media (max-width: 600px) {
+   .content article {
+      padding: 30px 0px;
+   }
+   .suit-box {
+      height: 320px;
+   }
+   .logo {
+      left: 5%;
+      width: 90%;
+   }
+   .fore-suit {
+      left: 0%;
+   }
+   .content {
+      margin-bottom: 0px;
+   }
+   .large-window {
+      height: 250px;
+      width: 250px;
+      margin: 0px auto;
+      background-size: 190%;
+      background-position: 50%;
+   }
+   .promo-text {
+      font-size: 40px;
+   }
+   .clothes-pics {
+      margin-bottom: 20px;
+   }
+   .blog-posts {
+      margin-top: 0px;
+   }
+   .blog-posts .post-1,
+   .blog-posts .post-2,
+   .blog-posts .post-3 {
+      transform: translate(0px, 0px);
+   }
+   .clothes-pics figure {
+      opacity: 1;
+      transform: translateX(0px);
+   }
+   .clothes-pics figcaption {
+      font-size: 16px;
+      left: 0;
+   }
+   footer {
+      position: relative;
+   }
 }
